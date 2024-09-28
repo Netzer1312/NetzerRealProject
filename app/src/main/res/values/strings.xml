@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">First</string>
+    <string name="netzer_football_gamling">Netzer Football Gamling</string>
+    <string name="start">START</string>
+    <string name="netzer_football_gambling">Netzer Football Gambling</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your Email:</string>
+    <string name="enter">Enter</string>
+    <string name="plesase_enter_your_email">Plesase enter your Email</string>
+    <string name="plesase_enter_your_password">Plesase enter your password</string>
+</resources>
