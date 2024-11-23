@@ -1,79 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".Login_fragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width = "100dp"
-        android:layout_height= "75dp"
-        android:src="@drawable/meow_meow" />
+    <!-- TODO: Update blank fragment layout -->
 
     <EditText
         android:id="@+id/UserNameR"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_margin="4dp"
-        android:inputType="text"
         android:hint="Plese enter your name:"
-         />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/UserEmailR"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Plese enter your Email:"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/UserPasswordR"
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Plese enter your password:"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/UserPasswordC"
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Plese re-type your password:"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/UserPhoneR"
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Plese enter your phone number:"
         android:inputType="phone" />
 
     <Button
         android:id="@+id/btToGame"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
         android:text="Register" />
 
     <Button
         android:id="@+id/btToLogIn"
-        android:backgroundTint="@color/white"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Already registerd? Log in->"
         android:textColor="#3F51B5  "
-        android:textStyle="bold"
         android:textSize="20dp"
-        android:text="Already registerd? Log in->" />
+        android:textStyle="bold" />
 
 </LinearLayout>

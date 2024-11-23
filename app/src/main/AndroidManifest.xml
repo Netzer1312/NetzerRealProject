@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First"
         tools:targetApi="31">
+        <activity
+            android:name=".Game_mode2"
+            android:exported="false" />
+        <activity
+            android:name=".GameMode"
+            android:exported="false"
+            android:label="@string/title_activity_game_mode"
+            android:theme="@style/Theme.First" />
+        <activity
+            android:name=".Game1"
+            android:exported="false" />
+        <activity
+            android:name=".Start"
+            android:exported="false" />
+        <activity
+            android:name=".StartGame1"
+            android:exported="false"
+            android:label="@string/title_activity_start_game1"
+            android:theme="@style/Theme.First" />
+        <activity
+            android:name=".StartGame"
+            android:exported="false"
+            android:label="@string/title_activity_start_game"
+            android:theme="@style/Theme.First" />
         <activity
             android:name=".Welcome"
             android:exported="false" />

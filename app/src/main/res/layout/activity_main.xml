@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meow Meow Beenz" />
+        android:text="City or state" />
 
     <ImageView
         android:id="@+id/Logo"

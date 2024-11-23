@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
@@ -15,20 +16,24 @@ public class Register extends AppCompatActivity {
     Button btToLog;
     EditText UserEmailR;
     EditText UserPasswordR;
+    EditText UserPasswordC;
     EditText UserNameR;
     EditText UserPhoneR;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//conect betwen them
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         UserEmailR = findViewById(R.id.UserEmailR);
+        UserPasswordC = findViewById(R.id.UserPasswordC);
         UserPasswordR = findViewById(R.id.UserPasswordR);
         UserNameR = findViewById(R.id.UserNameR);
         UserPhoneR = findViewById(R.id.UserPhoneR);
         bToGame = findViewById(R.id.btToGame);
         btToLog = findViewById(R.id.btToLogIn);
 
+        DateBaseHelper myDb;
+        myDb = new DateBaseHelper(this);
        String EmailRe = UserEmailR.getText().toString();
        String PasswordRe = UserPasswordR.getText().toString();
        String NameRe = UserNameR.getText().toString();
@@ -36,10 +41,15 @@ public class Register extends AppCompatActivity {
 
         btToLog.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                myDb.insertData(NameRe,PasswordRe,EmailRe,PhoneRe);
+                if(PasswordRe == UserPasswordC.getText().toString()) {//check if the password and re-password are the same
+                    Intent intent = new Intent(Register.this, Login.class);
 
-                Intent intent = new Intent( Register.this , Login.class);
-
-                startActivity(intent);
+                    startActivity(intent);
+                }
+                else{
+                    Toast toast = Toast.makeText(Register.this,"The password are not same",Toast.LENGTH_SHORT);
+                }
             }
         });
 
