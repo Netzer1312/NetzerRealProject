@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCDABD"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
 
     <TextView
-        android:textSize="40sp"
         android:id="@+id/LogoName"
-        android:gravity="center"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="City or state" />
+        android:text="MeowMeowBeenz"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="40dp" />
 
     <ImageView
         android:id="@+id/Logo"
-        android:layout_margin="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/meow_meow" />
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/meow_meow"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="Logo Image" />
 
     <Button
         android:id="@+id/BtStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start" />
-
+        android:text="Start"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5C6BC0"
+        android:elevation="6dp"
+        android:padding="16dp" />
 </LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
+    android:padding="24dp"
+    tools:context=".Real_startGame">
+
+    <TextView
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City or State"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:layout_marginBottom="60dp" />
+
+    <TextView
+        android:id="@+id/LastResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back!"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Score: 0"
+        android:textSize="32sp"
+        android:textColor="#FFC107"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/startReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="18dp"
+        android:elevation="6dp"
+        android:padding="14dp" />
+
+    <Button
+        android:id="@+id/startMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Game Mode"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="18dp"
+        android:elevation="6dp"
+        android:padding="14dp" />
+    <Button
+        android:id="@+id/buttonOnlineMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Online"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="18dp"
+        android:elevation="6dp"
+        android:padding="14dp" />
+        />
+    <Button
+        android:id="@+id/buttonAchievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🏆 Achievements"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:elevation="6dp"
+        android:padding="14dp" />
+</LinearLayout>

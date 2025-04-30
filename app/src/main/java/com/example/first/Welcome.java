@@ -21,7 +21,7 @@ public class Welcome extends AppCompatActivity {
 
 
         tvCdt = findViewById(R.id.tvCdt);
-        cdt = new CountDownTimer(7000, 1000){
+        cdt = new CountDownTimer(3000, 1000){
 
             public void onTick(long millisUntilFinished){
 

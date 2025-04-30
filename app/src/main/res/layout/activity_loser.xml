@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient_loser"
+    android:padding="32dp">
+
+    <!-- אימוג'י עצוב -->
+    <TextView
+        android:id="@+id/textSadFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="😢"
+        android:textSize="80sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- טקסט של הפסד -->
+    <TextView
+        android:id="@+id/textViewLoser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Lost..."
+        android:textSize="36sp"
+        android:textColor="#FFCDD2"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <!-- כפתור חזרה -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonReturnToStart"
+        android:backgroundTint="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_red"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+</LinearLayout>

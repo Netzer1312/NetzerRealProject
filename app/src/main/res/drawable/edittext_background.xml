@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- צבע רקע עדין עם שקיפות -->
+    <solid android:color="#33424A" /> <!-- שקוף טיפה, כחול־אפור כהה -->
+
+    <!-- פינות מעוגלות -->
+    <corners android:radius="16dp" />
+
+    <!-- מסגרת בהירה יותר -->
+    <stroke android:width="1.5dp" android:color="#90A4AE" /> <!-- אפור-כחול בהיר -->
+</shape>

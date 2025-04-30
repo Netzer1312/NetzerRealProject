@@ -1,0 +1,100 @@
+name,isCity
+Alabama,false
+Alaska,false
+Arizona,false
+Arkansas,false
+California,false
+Colorado,false
+Connecticut,false
+Delaware,false
+Florida,false
+Georgia,false
+Hawaii,false
+Idaho,false
+Illinois,false
+Indiana,false
+Iowa,false
+Kansas,false
+Kentucky,false
+Louisiana,false
+Maine,false
+Maryland,false
+Massachusetts,false
+Michigan,false
+Minnesota,false
+Mississippi,false
+Missouri,false
+Montana,false
+Nebraska,false
+Nevada,false
+New Hampshire,false
+New Jersey,false
+New Mexico,false
+New York,false
+North Carolina,false
+North Dakota,false
+Ohio,false
+Oklahoma,false
+Oregon,false
+Pennsylvania,false
+Rhode Island,false
+South Carolina,false
+South Dakota,false
+Tennessee,false
+Texas,false
+Utah,false
+Vermont,false
+Virginia,false
+Washington,false
+West Virginia,false
+Wisconsin,false
+Wyoming,false
+New York City,true
+Los Angeles,true
+Chicago,true
+Houston,true
+Phoenix,true
+Philadelphia,true
+San Antonio,true
+San Diego,true
+Dallas,true
+San Jose,true
+Austin,true
+Jacksonville,true
+Fort Worth,true
+Columbus,true
+Charlotte,true
+San Francisco,true
+Indianapolis,true
+Seattle,true
+Denver,true
+Washington, D.C.,true
+Boston,true
+El Paso,true
+Nashville,true
+Detroit,true
+Oklahoma City,true
+Portland,true
+Las Vegas,true
+Memphis,true
+Louisville,true
+Baltimore,true
+Milwaukee,true
+Albuquerque,true
+Tucson,true
+Fresno,true
+Sacramento,true
+Mesa,true
+Kansas City,true
+Atlanta,true
+Omaha,true
+Raleigh,true
+Miami,true
+Long Beach,true
+Virginia Beach,true
+Oakland,true
+Minneapolis,true
+Tulsa,true
+Tampa,true
+Arlington,true
+New Orleans,true

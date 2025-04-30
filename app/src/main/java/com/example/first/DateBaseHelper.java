@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 public class DateBaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "CustomerDET.db";
-    public static final String TABLE_NAME = "StudentTable.db";
+    public static final String TABLE_NAME = "StudentTable";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "PASSWORD";
@@ -29,14 +29,16 @@ public DateBaseHelper(Context context){
         onCreate(db);
         ///Handles the scenario where the database schema changes
     }
-    public void insertData(String name,String password,String email,String phone_number){
+    public boolean insertData(String name,String password,String email,String phone_number){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,name);
         contentValues.put(COL_3,password);
         contentValues.put(COL_4,email);
         contentValues.put(COL_6,phone_number);
-       db.insert(TABLE_NAME,null,contentValues);
+        long result = db.insert(TABLE_NAME, null, contentValues);
+
+        return result != -1; // Returns true if insert was successful, false otherwise
         //insert the data to the database
     }
     public Cursor getAllData() {
@@ -44,5 +46,37 @@ public DateBaseHelper(Context context){
         Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
         return res;
         //the function takes the data
+    }
+    public boolean setBestScore(String username, int newBestScore) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_5, newBestScore);
+        // Update the BEST_SCORE for the given username
+        int result = db.update(TABLE_NAME, contentValues, "NAME = ?", new String[]{username});
+
+        // Return true if the update was successful, false otherwise
+        return result != -1;
+    }
+    public int getBestScore(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int bestScore = 0;
+
+        Cursor cursor = db.rawQuery("SELECT BEST_SCORE FROM " + TABLE_NAME + " WHERE NAME=?", new String[]{username});
+        if (cursor.moveToFirst()) {
+            bestScore = cursor.getInt(0);
+        }
+        cursor.close();
+        return bestScore;
+    }
+    public boolean authenticateUser(String name, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME +
+                        " WHERE NAME = ? AND PASSWORD = ?",
+                new String[]{name, password});
+
+        boolean result = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return result;
     }
 }

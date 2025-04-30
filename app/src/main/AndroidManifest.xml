@@ -2,8 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -16,29 +24,51 @@
         android:theme="@style/Theme.First"
         tools:targetApi="31">
         <activity
-            android:name=".Game_mode2"
+            android:name=".DrawActivity"
             android:exported="false" />
         <activity
-            android:name=".GameMode"
-            android:exported="false"
-            android:label="@string/title_activity_game_mode"
-            android:theme="@style/Theme.First" />
-        <activity
-            android:name=".Game1"
+            android:name=".LoserActivity"
             android:exported="false" />
         <activity
-            android:name=".Start"
+            android:name=".WinnerActivity"
             android:exported="false" />
         <activity
-            android:name=".StartGame1"
-            android:exported="false"
-            android:label="@string/title_activity_start_game1"
-            android:theme="@style/Theme.First" />
+            android:name=".EndGameActivity"
+            android:exported="false" />
         <activity
-            android:name=".StartGame"
-            android:exported="false"
-            android:label="@string/title_activity_start_game"
-            android:theme="@style/Theme.First" />
+            android:name=".Real_GameOnline"
+            android:exported="false" />
+        <activity
+            android:name=".PlayOnlineGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JoinCreateRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameRoom"
+            android:exported="false" />
+        <activity
+            android:name=".Leaderboard"
+            android:exported="false" />
+
+        <receiver
+            android:name=".AlarmReciver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Real_GameMode"
+            android:exported="false" />
+        <activity
+            android:name=".Real_GameReg"
+            android:exported="false" />
+        <activity
+            android:name=".Real_startGame"
+            android:exported="false" />
         <activity
             android:name=".Welcome"
             android:exported="false" />
